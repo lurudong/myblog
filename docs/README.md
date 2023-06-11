@@ -17,4 +17,5 @@ features:
 ---
 
 ### .net经典技术路线图
-![Alt text](.vuepress/public/.net%E6%8A%80%E6%9C%AF%E8%B7%AF%E7%BA%BF.png)
+
+![.net经典技术路线图](.net%E6%8A%80%E6%9C%AF%E8%B7%AF%E7%BA%BF.png)
