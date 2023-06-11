@@ -23,6 +23,10 @@ export default {
         link: '/test.md',
       },
       {
+        text: '后端.Net',
+        link: '/dotnet/design-pattern.md',
+      },
+      {
 
          text:'程序员在线导航',
          link:'https://mouday.github.io/hao123'
