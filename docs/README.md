@@ -18,4 +18,4 @@ features:
 
 ### .net经典技术路线图
 
-![.net经典技术路线图](.net技术路线.png)
+![.net经典技术路线图](./.net.png)
