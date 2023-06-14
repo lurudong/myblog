@@ -194,7 +194,7 @@ select host, user, authentication_string, plugin from user;
 sudo service mysql restart
 ```
 
-# MySQL数据库基本使用
+## MySQL数据库基本使用
 
 ### 启动MySQL数据库服务
 ```sh
