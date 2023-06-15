@@ -38,6 +38,16 @@ export default {
              
             ]
           },
+          {
+            text: 'Docker',
+            children:[
+              {
+                text:'Docker的安装',
+                link: '/liunx/docker/Ubuntu下安装Docker.md'
+              }
+             
+            ]
+          },
         ]
       },
       {
