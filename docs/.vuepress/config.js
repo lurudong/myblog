@@ -5,6 +5,8 @@ import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import { path } from '@vuepress/utils'
 import { activeHeaderLinksPlugin } from '@vuepress/plugin-active-header-links'
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
+import { searchPlugin } from '@vuepress/plugin-search'
+
 export default {
   base: process.env.NODE_ENV == "production" ? "/" : "/",
   head: [['link', { rel: 'icon', href: '/hero.png' }]],
@@ -42,8 +44,13 @@ export default {
             text: 'Docker',
             children:[
               {
-                text:'Docker的安装',
+                text:'Ubuntu安装Docker',
                 link: '/liunx/docker/Ubuntu下安装Docker.md'
+                
+              },
+              {
+                text:'Docker安装Redis',
+                link: '/liunx/docker/Dokcer下安装Redis容器.md'
                 
               }
              
