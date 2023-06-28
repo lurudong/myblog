@@ -6,8 +6,8 @@ import { path } from '@vuepress/utils'
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 import { defineUserConfig } from 'vuepress'
 export default  defineUserConfig({
-  // base: process.env.NODE_ENV == "production" ? "/" : "/",
-  // head: [['link', { rel: 'icon', href: '/hero.png' }]],
+  base: process.env.NODE_ENV == "production" ? "/" : "/",
+  head: [['link', { rel: 'icon', href: '/hero.png' }]],
   // head: [
   //   [
   //     "script",
