@@ -38,11 +38,11 @@ export default{
           },
           {
             text: '后端',
-            link: '/dotnet/design-pattern.md',
+            link: '/dotnet/design-pattern.html',
           },
           {
             text: '前端',
-            link: '/dotnet/design-pattern.md',
+            link: '/dotnet/design-pattern.html',
           },
           {
             text: 'Linux运维/工具',
@@ -52,7 +52,7 @@ export default{
                 children:[
                   {
                     text:'MySql的安装',
-                    link: '/liunx/mysql/Ubuntu 安装MySQL与配置及运程登录.md'
+                    link: '/liunx/mysql/Ubuntu 安装MySQL与配置及运程登录.html'
                   }
                  
                 ]
@@ -62,12 +62,12 @@ export default{
                 children:[
                   {
                     text:'Ubuntu安装Docker',
-                    link: '/liunx/docker/Ubuntu下安装Docker.md'
+                    link: '/liunx/docker/Ubuntu下安装Docker.mhtmld'
                     
                   },
                   {
                     text:'Docker安装Redis',
-                    link: '/liunx/docker/Dokcer下安装Redis容器.md'
+                    link: '/liunx/docker/Dokcer下安装Redis容器.html'
                     
                   }
                  
