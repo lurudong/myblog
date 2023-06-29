@@ -1,25 +1,22 @@
 
 
 import { defaultTheme } from 'vuepress'
-import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
-import { path } from '@vuepress/utils'
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
-import { defineUserConfig } from 'vuepress'
-export default  defineUserConfig({
+export default{
+
   base: process.env.NODE_ENV == "production" ? "/" : "/",
   head: [['link', { rel: 'icon', href: '/hero.png' }]],
 
   locales: {
     '/': {
-      lang: 'en-CN',
+      lang: 'zh-CN',
       title: 'NbCode',
-      description: 'NbCode 开源项目',
+      description: 'NbCode',
     },
    
 },
 
   theme: defaultTheme({
-
     navbar: [
       {
         text: '首页',
@@ -140,6 +137,4 @@ export default  defineUserConfig({
  
 
   ],
-
-  
-})
+}
