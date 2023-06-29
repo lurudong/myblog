@@ -3,7 +3,7 @@
 # # 确保脚本抛出遇到的错误
 set -e
 
-# echo 'www.nbcode.asia' > CNAME
+echo 'www.nbcode.asia' > CNAME
 
 git init
 git add -A
