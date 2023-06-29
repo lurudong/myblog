@@ -9,7 +9,7 @@ export default{
 
   locales: {
     '/': {
-      lang: 'en-CN',
+      lang: 'zh-CN',
       title: 'NbCode',
       description: 'NbCode',
     },
@@ -134,7 +134,7 @@ export default{
       // },
       locales: {
         '/': {
-          lang: 'en-CN',
+          lang: 'zh-CN',
           placeholder: '搜索文档',
           translations: {
             button: {
