@@ -34,7 +34,7 @@ export default{
           },
           {
             text: '测试',
-            link: '/test.md',
+            link: '/test.html',
           },
           {
             text: '后端',
