@@ -10,8 +10,8 @@ export default{
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: 'NbCode',
-      description: 'NbCode',
+      title: '拒绝内卷',
+      description: '内卷你妹',
     },
    
 },
@@ -117,7 +117,6 @@ export default{
   }),
  
   plugins: [
-
     docsearchPlugin({
       appId: '1KV5ZOFV7K',
       apiKey: 'e92ac7d445eead0fa734d3feff52fc5f',
