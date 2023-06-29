@@ -19,22 +19,12 @@ export default{
   theme: defaultTheme({
 
     locales: {
-      /**
-       * English locale config
-       *
-       * As the default locale of @vuepress/theme-default is English,
-       * we don't need to set all of the locale fields
-       */
+ 
       '/': {
-        // navbar
         navbar: [
           {
             text: '首页',
             link: '/',
-          },
-          {
-            text: '测试',
-            link: '/test.html',
           },
           {
             text: '后端',
