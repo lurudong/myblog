@@ -27,7 +27,61 @@ export default{
        */
       '/': {
         // navbar
-       
+        navbar: [
+          {
+            text: '首页',
+            link: '/',
+          },
+          {
+            text: '测试',
+            link: '/test.html',
+          },
+          {
+            text: '后端',
+            link: '/dotnet/design-pattern.html',
+          },
+          {
+            text: '前端',
+            link: '/dotnet/design-pattern.html',
+          },
+          {
+            text: 'Linux运维/工具',
+            children: [
+              {
+                text: 'MySql',
+                children:[
+                  {
+                    text:'MySql的安装',
+                    link: '/liunx/mysql/Ubuntu 安装MySQL与配置及运程登录.html'
+                  }
+                 
+                ]
+              },
+              {
+                text: 'Docker',
+                children:[
+                  {
+                    text:'Ubuntu安装Docker',
+                    link: '/liunx/docker/Ubuntu下安装Docker.html'
+                    
+                  },
+                  {
+                    text:'Docker安装Redis',
+                    link: '/liunx/docker/Dokcer下安装Redis容器.html'
+                    
+                  }
+                 
+                ]
+              },
+            ]
+          },
+          {
+    
+            text: '程序员在线导航',
+            link: 'https://mouday.github.io/hao123'
+          }
+    
+        ],
         selectLanguageName: '简体中文',
         selectLanguageText: '选择语言',
         selectLanguageAriaLabel: '选择语言',
