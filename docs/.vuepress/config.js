@@ -32,7 +32,10 @@ export default{
             text: '首页',
             link: '/',
           },
-       
+          {
+            text: '测试',
+            link: '/test.md',
+          },
           {
             text: '后端',
             link: '/dotnet/design-pattern.md',
@@ -129,6 +132,7 @@ export default{
       appId: '1KV5ZOFV7K',
       apiKey: 'e92ac7d445eead0fa734d3feff52fc5f',
       indexName: 'nbcode',
+      contextualSearch: true,
       //  searchParameters: {
       //   facetFilters: ['tags:v2'],
       // },
