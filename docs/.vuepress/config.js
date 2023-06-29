@@ -62,7 +62,7 @@ export default{
                 children:[
                   {
                     text:'Ubuntu安装Docker',
-                    link: '/liunx/docker/Ubuntu下安装Docker.mhtmld'
+                    link: '/liunx/docker/Ubuntu下安装Docker.html'
                     
                   },
                   {
