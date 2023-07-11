@@ -68,7 +68,7 @@ export default{
           {
     
             text: '程序员在线导航',
-            link: 'https://mouday.github.io/hao123'
+            link: 'https://hao123.nbcode.asia'
           }
     
         ],
