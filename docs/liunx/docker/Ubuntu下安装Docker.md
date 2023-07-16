@@ -176,8 +176,63 @@ https://hub-mirror.c.163.com/
 
 这些镜像服务商给钱你，才考虑一下。
 
+## 安装Docker Compose
+Linux 上我们可以从 Github 上下载它的二进制包来使用，最新发行的版本地址：https://github.com/docker/compose/releases。
 
+1.运行以下命令以下载 Docker Compose 的当前稳定版本：
+```sh
+$ sudo curl -L "https://github.com/docker/compose/releases/download/v2.2.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
+或者
+
+sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+```
+要安装其他版本的 Compose，请替换 v2.2.2。
+
+Docker Compose 存放在 GitHub，不太稳定。
+
+你可以也通过执行下面的命令，高速安装 Docker Compose。
+
+``` sh
+
+curl -L https://get.daocloud.io/docker/compose/releases/download/v2.4.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+```
+2.授予docker-compose文件执行权限：
+``` sh
+sudo chmod +x /usr/local/bin/docker-compose
+```
+3.创建软链：
+
+``` sh
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+```
+
+> 如果不执行这步，执行 `docker-compose --version` 会报如下错误：
+>
+> `-bash: /usr/bin/docker-compose: No such file or directory`
+>
+> 要么就使用
+>
+> `sudo docker-compose --version`
+>
+>   
+
+> ln -s  作用
+>
+> `ln -s`命令用于创建符号链接（Symbolic Link），也称为软链接。符号链接是指向另一个文件或目录的特殊文件。当您通过符号链接访问目标文件时，实际上是通过符号链接跳转到目标文件。
+>
+> 具体地说，`ln -s`命令的作用是创建一个指向目标文件或目录的符号链接。
+>
+> `ln -s <目标文件/目录> <符号链接路径>`
+
+4.验证Docker Compose是否成功安装。您可以运行以下命令来检查版本信息：
+
+``` sh
+docker-compose --version
+
+如果您看到类似于"docker-compose version x.x.x"的输出，表示Docker Compose已成功安装。
+```
 ## 参考：
 
 [Docker官网Ubuntu安装文档](https://docs.docker.com/engine/install/ubuntu/)
