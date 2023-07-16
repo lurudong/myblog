@@ -177,7 +177,7 @@ https://hub-mirror.c.163.com/
 这些镜像服务商给钱你，才考虑一下。
 
 ## 安装Docker Compose
-Linux 上我们可以从 Github 上下载它的二进制包来使用，最新发行的版本地址：https://github.com/docker/compose/releases。
+Linux 上我们可以从 Github 上下载它的二进制包来使用，最新发行的版本地址：[最新发行的版本地址](https://github.com/docker/compose/releases)。
 
 1.运行以下命令以下载 Docker Compose 的当前稳定版本：
 ```sh
