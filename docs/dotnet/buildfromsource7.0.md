@@ -182,6 +182,11 @@ git checkout v7.0.1  选版本
 }
 
 vswhere 的版本需要你自己去看自己安装了什么版本  C:\Program Files (x86)\Microsoft Visual Studio\Installer 找到vswhere 属性详细信息查看版本，待会安装的时候需要你拷贝进文件夹的。
+
+提示
+Downloading vswhere
+找不到某个文件 ，那么就需要我们去把文件给补回来 ，比如我们的vswhere 文件 你嫌下载的慢 可以直接复制 到 .tools/vswhere/3.0.1/里面去。
+
 ```
 
 ### 2.更改`Versions.props`
@@ -196,23 +201,77 @@ vswhere 的版本需要你自己去看自己安装了什么版本  C:\Program Fi
 
 ###  3.更改NuGet.config
 
-在根目录下：
+在根目录下
+把以下的去掉，不是会报错
 
-
+``` sh
+  <add key="darc-int-dotnet-efcore-8b903ca" value="https://pkgs.dev.azure.com/dnceng/internal/_packaging/darc-int-dotnet-efcore-8b903ca4/nuget/v3/index.json" />
+   
+  <add key="darc-int-dotnet-runtime-97203d3" value="https://pkgs.dev.azure.com/dnceng/internal/_packaging/darc-int-dotnet-runtime-97203d38/nuget/v3/index.json" />
+```
 
 ### 4.执行 .\restore.cmd 
 
-漫长的等待，抽烟，看美女小姐姐，看黑丝，做什么都可以，就是等待。。。。。。。。。。。。
+漫长的等待，抽烟，看美女小姐姐，看黑丝（蓝光），做什么都可以，就是等待。。。。。。。。。。。。玩命加载中。。。。。。。
 
-TMD的72小时都没有成功，放弃了。
+最后出现，说明成功
+
+```
+ [1/4] Resolving packages...
+  [2/4] Fetching packages...
+  [3/4] Linking dependencies...
+  [4/4] Building fresh packages...
+  Done in 3.57s.
+  Running yarn install on E:\dhgaspnetcore\src\SignalR\clients\ts\signalr\signalr.npmproj
+  yarn install v1.22.10
+  [1/4] Resolving packages...
+  [2/4] Fetching packages...
+  [3/4] Linking dependencies...
+  [4/4] Building fresh packages...
+  Done in 2.67s.
+  Running yarn install on E:\dhgaspnetcore\src\JSInterop\Microsoft.JSInterop.JS\src\Microsoft.JSInterop.JS.npmproj
+  yarn install v1.22.10
+  [1/4] Resolving packages...
+  [2/4] Fetching packages...
+  [3/4] Linking dependencies...
+  [4/4] Building fresh packages...
+  Done in 7.15s.
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:10:35.12
 
 ```
 
+### 5.执行build
+
+```shell
+.\eng\build.cmd -all -pack -arch x64
+.\eng\build.cmd -all -pack -arch x86 -noBuildJava
+.\eng\build.cmd -buildInstallers
+
+ .\eng\build.cmd -noBuildNative -noBuildManage
 ```
+
+### 6.用科学打开VS
+
+```
+.\startvs.cmd .\src\Mvc\Mvc.sln
+```
+
+### 参考：
+
+[如何编译Asp.net Core 6 源码 教你快速踩坑 - 果小天 - 博客园 (cnblogs.com)](https://www.cnblogs.com/guoxiaotian/p/16378181.html)
 
 [restore failed, error NU1103: Unable to find a stable package · Issue #41656 · dotnet/aspnetcore (github.com)](https://github.com/dotnet/aspnetcore/issues/41656)
 
 [aspnetcore/docs/BuildFromSource.md at main · dotnet/aspnetcore (github.com)](https://github.com/dotnet/aspnetcore/blob/main/docs/BuildFromSource.md)
 
 [asp.net core从头学03--编译asp.net core源码 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/461838889)
+
+[Make build.cmd with no args build everything · Issue #6304 · dotnet/aspnetcore --- 使build.cmd没有args构建一切 ·问题 #6304 ·dotnet/aspnetcore (github.com)](https://github.com/dotnet/aspnetcore/issues/6304)
+
+[aspnetcore/docs/BuildErrors.md at main · dotnet/aspnetcore (github.com)](https://github.com/dotnet/aspnetcore/blob/main/docs/BuildErrors.md)
 
