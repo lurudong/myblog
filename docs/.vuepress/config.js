@@ -28,11 +28,19 @@ export default{
           },
           {
             text: '后端',
-            link: '/dotnet/design-pattern.html',
-          },
-          {
-            text: '前端',
-            link: '/dotnet/design-pattern.html',
+            // link: '/dotnet/design-pattern.html',
+            children:[
+              {
+
+                text: '设计模式',
+                link: '/dotnet/design-pattern.html',
+              },
+              {
+
+                text: 'ASP.NET CORE 7.0 源码编译',
+                link: '/dotnet/buildfromsource7.0.html',
+              }
+            ]
           },
           {
             text: 'Linux运维/工具',
