@@ -144,15 +144,21 @@ git checkout v7.0.1  选版本
 ```
 
 ### 1.更改 `global.json`
+ `"tools"`下添加`vswhere: "3.1.1"`
 
-```sh
+修改 `"sdk":version`、`"tools":"dotnet"`  修改成自己本地sdk版本
+
+`"vs"`下 `version` 可以修改，可以不修改，但是不能高于你本地VS版本
+`jdk,git`，想修改可以自行修改
+```sh 
+
 {
   "sdk": {
-    "version": "7.0.306"
+    "version": "7.0.306" //修改成自己本地版本
   },
   "tools": {
     "vswhere": "3.1.1",  //添加
-    "dotnet": "7.0.306",
+    "dotnet": "7.0.306", //修改成自己本地版本
     "runtimes": {
       "dotnet/x86": [
         "$(MicrosoftNETCoreBrowserDebugHostTransportVersion)"
@@ -252,16 +258,20 @@ Downloading vswhere
 .\eng\build.cmd -all -pack -arch x86 -noBuildJava
 .\eng\build.cmd -buildInstallers
 
+-------------------------------------------
+慢慢等吧。。。。。。。。。。。
+有可能一堆错误解决，也有可能没有错误。。。。。
+
  .\eng\build.cmd -noBuildNative -noBuildManage
 ```
 
 ### 6.用科学打开VS
-
+请用此方式打开项目。
 ```
 .\startvs.cmd .\src\Mvc\Mvc.sln
 ```
 
-### 参考：
+# 参考：
 
 [如何编译Asp.net Core 6 源码 教你快速踩坑 - 果小天 - 博客园 (cnblogs.com)](https://www.cnblogs.com/guoxiaotian/p/16378181.html)
 
