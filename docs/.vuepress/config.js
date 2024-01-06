@@ -71,6 +71,18 @@ export default{
                  
                 ]
               },
+              {
+                text: 'K8S',
+                children:[
+                  {
+                    text:'部署.NET8程序,并支持外部访问',
+                    link: '/liunx/K8S/K8S下部署.NET8程序，并支持外部访问.html'
+                    
+                  }
+            
+                 
+                ]
+              }
             ]
           },
           {
