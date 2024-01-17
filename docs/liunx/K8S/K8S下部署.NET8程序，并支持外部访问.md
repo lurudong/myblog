@@ -57,6 +57,10 @@ spec:
             port:
               number: 8080  #程序端口
 ```
+### kuboard安装
+``` sh
+ docker run -d  --restart=unless-stopped  --name=kuboard  -p 8081:80/tcp   -p 10081:10081/tcp   -e KUBOARD_ENDPOINT="http://114.132.177.254:8090"   -e KUBOARD_AGENT_SERVER_TCP_PORT="10081"   -v /home/kuboard-data:/data   swr.cn-east-2.myhuaweicloud.com/kuboard/kuboard:v3
+```
 执行`sudo kubectl apply -f xx.yaml`
 
 访问`http://<ip>:<nodePort>`
