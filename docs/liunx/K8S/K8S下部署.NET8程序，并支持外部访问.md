@@ -37,6 +37,26 @@ spec:
   selector:
     app: aspnetcore
 ```
+
+### 使用Ingress暴露到外部
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: aspnetcore-deployment
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: aspnetcore-deployment
+            port:
+              number: 8080  #程序端口
+```
 执行`sudo kubectl apply -f xx.yaml`
 
 访问`http://<ip>:<nodePort>`
