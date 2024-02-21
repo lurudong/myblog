@@ -13,6 +13,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 #ssh://git@ssh.github.com:443/lurudong/myblog.git
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:lurudong:443/myblog.git master
+git push -f ssh://git@ssh.github.com:443/lurudong/myblog.git master
 
 cd -
