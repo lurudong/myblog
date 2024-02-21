@@ -67,6 +67,11 @@ export default{
                     text:'Docker安装Redis',
                     link: '/liunx/docker/Dokcer下安装Redis容器.html'
                     
+                  },
+                  {
+                    text:'Ubuntu部署Harbor',
+                    link: '/liunx/Ubuntu下部署Harbor.html'
+                    
                   }
                  
                 ]
