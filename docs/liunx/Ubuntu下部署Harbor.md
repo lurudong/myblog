@@ -139,7 +139,7 @@ docker logout xxx
 ```
 
 
-### 参考
+## 参考
 [Ubuntu 系统 Harbor 部署](https://github.com/EasilyNET/docs/blob/main/Harbor/harbor%E9%83%A8%E7%BD%B2.md?plain=1#L148)
 
 [Harbor私有仓库搭建并配置https对接docker与kubernetes](https://segmentfault.com/a/1190000043223828)
