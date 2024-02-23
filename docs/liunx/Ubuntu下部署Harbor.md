@@ -88,6 +88,7 @@ c28b438e9f26   goharbor/redis-photon:v2.9.2                         "redis-serve
   密码是默认的，请看配置文件
 
 ## 登录仓库
+最好使用https登录
 ```shell
 # 语法: docker login [OPTIONS] [SERVER]
 # 请将域名替换为自己的.
@@ -96,7 +97,7 @@ c28b438e9f26   goharbor/redis-photon:v2.9.2                         "redis-serve
 docker login xxxx
 ```
 
-### 错误
+### 问题
 有可能没有使用域名只使用IP地址访问。
 
  `Error response from daemon: Get "https://xxxx:8088/v2/": http: server gave HTTP response to HTTPS client`
@@ -110,6 +111,7 @@ sudo nano /etc/docker/daemon.json
   "insecure-registries" : ["https://xxxx:443","http://xxx.8088"]
 }
 ```
+
 #### 重启Docker服务
 
 ```shell
