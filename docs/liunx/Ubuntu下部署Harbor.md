@@ -49,6 +49,10 @@ http:
   
 以下该文件内容自行修改
 ```
+ - Https配置以下：
+  
+   [有详细教程](https://goharbor.io/docs/2.10.0/install-config/configure-https)
+
 - 配置文件**harbor.yml**调整后，执行以下安装命令
 ```shell
 # 后边的--with-trivy是添加了一个扫描器,用来扫描镜像漏洞的.若是不需要可以不加.也可以后期再执行这个命令添加上去.
@@ -93,7 +97,7 @@ docker login xxxx
 ```
 
 ### 错误
-因为我使用http，没有使用https所以会出现这个错误。
+有可能没有使用域名只使用IP地址访问。
 
  `Error response from daemon: Get "https://xxxx:8088/v2/": http: server gave HTTP response to HTTPS client`
  
@@ -103,15 +107,15 @@ sudo nano /etc/docker/daemon.json
 在文件中添加所需的配置。例如，要配置Docker以允许通过HTTP连接到某个非安全的Registry，可以添加如下内容：
 ```json
 {
-  "insecure-registries" : ["你的registry地址:端口"]
+  "insecure-registries" : ["https://xxxx:443","http://xxx.8088"]
 }
 ```
 #### 重启Docker服务
 
 ```shell
 sudo systemctl daemon-reload
-sudo systemctl restart docker.service
-##sudo systemctl restart docker
+#sudo systemctl restart docker.service
+sudo systemctl restart docker
 
 
 ```
