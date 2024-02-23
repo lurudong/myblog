@@ -52,7 +52,8 @@ requirepass 123456
 3..docker 启动 redis
 
 ```shell
-docker run --name redis -p 6379:6379 \
+
+docker run --restart=always --name redis -p 6379:6379 \
 -v /home/ubuntu/redis/data:/data \
 -v /home/ubuntu/redis/conf/redis.conf:/etc/redis/redis.conf \
 -d redis redis-server /etc/redis/redis.conf
